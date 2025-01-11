@@ -13,6 +13,7 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
+    background: rgb(245, 245, 245)
 }
 
 nav {
@@ -145,7 +146,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 24;
+    gap: 24px;
 }
 
 #card1 {
@@ -165,6 +166,7 @@ nav {
     border-radius: 16px;
     background: rgb(247, 235, 207);
 }
+
 .learn {
     padding: 11px 20px 11px 20px;
     align-items: center;
@@ -175,25 +177,29 @@ nav {
     border-radius: 8px;
     width: 122px;
     height: 41px;
-    gap: 48;
+    gap: 48px;
     color: rgb(255, 255, 255);
 }
 
 .learn:hover {
     background-color: azure;
 }
-#learn1{
+
+#learn1 {
     border-radius: 8px;
     background: rgb(84, 144, 245);
 }
-#learn2{
+
+#learn2 {
     border-radius: 8px;
     background: rgb(9, 161, 92);
 }
-#learn3{
+
+#learn3 {
     border-radius: 8px;
-    background: rgb(255, 194, 57);  
+    background: rgb(255, 194, 57);
 }
+
 .yunus {
     box-sizing: border-box;
     border: 1px solid rgba(14, 14, 14, 0.15);
@@ -203,12 +209,102 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 24;
+    gap: 24px;
     background: rgb(255, 255, 255);
 }
-.yunus p{
+
+.yunus p {
     background-image: url("assets/quote-bg.png");
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
+}
+
+.recent_news {
+    width: 1600px;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 0px;
+    flex: none;
+    margin: 150px 160px;
+}
+
+#recent_news {
+    color: rgb(14, 14, 14);
+    font-family: Fira Sans;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0%;
+    text-align: left;
+    gap: 32px;
+}
+
+.news_cards {
+    display: block;
+    padding: 0px;
+    gap: 24px;
+    margin: 32px 0px;
+    width: 1600px;
+    height: 560px;
+}
+
+.news_card {
+    display: flex;
+    border-radius: 24px;
+    padding: 48px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+    margin: 32px 0px;
+    background: rgb(255, 255, 255);
+}
+
+.readmore {
+    width: 139px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 26px 13px 26px;
+    color: rgb(255, 255, 255);
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: rgb(0, 106, 80);
+    border-style: none;
+
+}
+
+.readmore:hover {
+    background-color: rgb(127, 179, 179);
+    color: rgb(20, 48, 48);
+}
+
+.satelite {
+    border-radius: 24px;
+    flex: none;
+    width: 408px;
+    height: 306px;
+    margin: 0px 32px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.news {
+    position: static;
+    width: 744px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 0px;
 }
