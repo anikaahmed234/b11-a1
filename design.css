@@ -6,18 +6,10 @@
 }
 
 body {
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgb(245, 245, 245)
+    background: rgb(245, 245, 245);
 }
 
 nav {
-    position: absolute;
     width: 1600px;
     height: 100px;
     display: flex;
@@ -25,6 +17,21 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 24px 160px 24px 160px;
+}
+
+.head .title {
+    color: rgb(14, 14, 14);
+    font-family: Fira Sans;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
 }
 
 .btn {
@@ -39,10 +46,16 @@ nav {
     border-radius: 8px;
     width: 116px;
     height: 52px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+
 }
 
 .btn:hover {
-    background-color: azure;
+     background: rgb(198, 228, 214);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
 }
 
 .banner {
@@ -52,15 +65,15 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 64;
+    gap: 64px;
     padding: 80px 100px 80px 100px;
-    margin: 150px 160px;
+    margin: 0px 160px;
     border-radius: 24px;
     background: rgb(198, 228, 214);
 }
 
 #banner_content {
-    position: static;
+
     width: 622px;
     height: 326px;
     display: flex;
@@ -76,19 +89,25 @@ nav {
     color: rgba(14, 14, 14, 0.5);
     font-family: Fira Sans;
     font-size: 24px;
+    display: flex;
     font-weight: 500;
     line-height: 29px;
-    letter-spacing: 0%;
+    gap: 16px;
     text-align: left;
 }
 
 #banner_detail {
     color: rgb(14, 14, 14);
+    width: 622px;
+    height: 201px;
     font-family: Fira Sans;
     font-size: 56px;
+    display: flex;
+    gap: 16px;
+    padding: 0px;
     font-weight: 700;
     line-height: 67px;
-    letter-spacing: 0%;
+    flex: none;
     text-align: left;
 }
 
@@ -100,19 +119,21 @@ nav {
     padding: 17px 34px 17px 34px;
     color: rgb(255, 255, 255);
     font-family: Fira Sans;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     border-radius: 8px;
     box-sizing: border-box;
     margin-top: 24px;
     background-color: rgb(0, 106, 80);
     border-style: none;
-
+    cursor: pointer;
 }
 
 #banner_button:hover {
-    background-color: azure;
-    color: cadetblue;
+ background-color: #45a049; 
+ transform: scale(1.1); 
+ box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+ color: #fff; 
 }
 
 .content {
@@ -126,6 +147,17 @@ nav {
     padding: 0px;
     flex: none;
     margin: 150px 160px;
+}
+
+#vision {
+    color: rgb(14, 14, 14);
+    font-family: Fira Sans;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0%;
+    text-align: left;
+    gap: 32px;
 }
 
 .cards {
@@ -179,10 +211,8 @@ nav {
     height: 41px;
     gap: 48px;
     color: rgb(255, 255, 255);
-}
+    cursor: pointer;
 
-.learn:hover {
-    background-color: azure;
 }
 
 #learn1 {
@@ -200,6 +230,11 @@ nav {
     background: rgb(255, 194, 57);
 }
 
+.learn:hover {
+    background-color: #b37032 !important;
+    color: black;
+}
+
 .yunus {
     box-sizing: border-box;
     border: 1px solid rgba(14, 14, 14, 0.15);
@@ -213,7 +248,24 @@ nav {
     background: rgb(255, 255, 255);
 }
 
-.yunus p {
+.cheif {
+    color: rgba(14, 14, 14, 0.6);
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 0px;
+    width: 1232px;
+}
+
+#quote {
     background-image: url("assets/quote-bg.png");
     background-repeat: no-repeat;
     background-position: left;
@@ -222,7 +274,6 @@ nav {
 
 .recent_news {
     width: 1600px;
-    height: 560px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -230,7 +281,7 @@ nav {
     gap: 32px;
     padding: 0px;
     flex: none;
-    margin: 150px 160px;
+    margin: 0px 160px;
 }
 
 #recent_news {
@@ -250,7 +301,6 @@ nav {
     gap: 24px;
     margin: 32px 0px;
     width: 1600px;
-    height: 560px;
 }
 
 .news_card {
@@ -258,9 +308,9 @@ nav {
     border-radius: 24px;
     padding: 48px;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: space-between;
     gap: 32px;
+    align-self: stretch;
     margin: 32px 0px;
     background: rgb(255, 255, 255);
 }
@@ -279,32 +329,290 @@ nav {
     box-sizing: border-box;
     background-color: rgb(0, 106, 80);
     border-style: none;
+    cursor: pointer;
 
 }
 
 .readmore:hover {
-    background-color: rgb(127, 179, 179);
-    color: rgb(20, 48, 48);
+    background-color: #8bc17e;
+    font-weight: 500;
 }
 
 .satelite {
     border-radius: 24px;
     flex: none;
     width: 408px;
-    height: 306px;
+    /* height: 306px; */
     margin: 0px 32px;
     object-fit: cover;
     overflow: hidden;
 }
 
 .news {
-    position: static;
     width: 744px;
-    height: 290px;
+    /* height: 306px; */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: flex-start;
     gap: 32px;
     padding: 0px;
+    margin: 0px 32px;
+}
+
+.donate {
+    width: 1600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+    padding: 0px;
+    margin: 0px 160px;
+}
+
+.donate #title {
+    color: rgb(14, 14, 14);
+    font-family: Fira Sans;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.donate p {
+    color: rgba(14, 14, 14, 0.7);
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.donate_done {
+    justify-content: center;
+    align-items: center;
+    padding: 13px 26px 13px 26px;
+    color: rgb(255, 255, 255);
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: rgb(0, 106, 80);
+    border-style: none;
+    cursor: pointer;
+}
+
+.donate_done:hover {
+    background-color: #8bc17e;
+    font-weight: 500;
+}
+
+#taka {
+    width: 1032px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    /* gap: 24px; */
+    padding: 20px 40px 20px 40px;
+    background: rgb(255, 255, 255);
+    color: rgba(14, 14, 14, 0.3);
+    font-family: Fira Sans;
+    font-size: 20px;
+    font-weight: 400;
+    gap: 12px;
+    border: none;
+}
+
+.taka_cards {
+    width: 1071px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 24px;
+    padding: 0px;
+    flex: none;
+    margin: 32px 0px;
+}
+
+.taka_card {
+    display: flex;
+    height: 128px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgba(14, 14, 14, 0.15);
+    border-radius: 16px;
+    background: rgb(255, 255, 255);
+    color: rgba(14, 14, 14, 0.8);
+    font-family: Fira Sans;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0%;
+    text-align: left;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.taka_card:hover {
+    box-sizing: border-box;
+    border: 1px solid rgba(14, 14, 14, 0.15);
+    border-radius: 16px;
+    background: rgb(198, 228, 214);
+}
+
+.newsletter {
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 64px;
+    flex: none;
+    padding: 80px 100px 80px 100px;
+    margin: 80px 160px;
+    border-radius: 24px;
+    background: rgb(198, 228, 214);
+}
+
+.newsletter .title {
+    color: rgb(14, 14, 14);
+    font-family: Fira Sans;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.newsletter .details {
+    color: rgba(14, 14, 14, 0.7);
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.email_box {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+    list-style: none;
+}
+
+.email_box li {
+    margin: 0px;
+    display: inline-block;
+    padding: 0;
+}
+
+.email_space {
+    width: 600px;
+    height: 55px;
+    padding-left: 40px;
+    font-size: 16px;
+    color: rgba(14, 14, 14, 0.3);
+    border: none;
+    border-radius: 8px 0px 0px 8px;
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 19px;
+    letter-spacing: 0%;
+}
+
+#subscribe {
+    width: 150px;
+    height: 55px;
+    padding: 17px 34px 17px 34px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 0px 8px 8px 0px;
+    background: rgb(0, 106, 80);
+    cursor: pointer;
+    font-family: Fira Sans;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+#subscribe:hover {
+    background-color: #8bc17e;
+    font-weight: 500;
+}
+
+
+#promise {
+    color: rgba(14, 14, 14, 0.7);
+    font-family: Fira Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+footer {
+    background: rgb(255, 255, 255);
+    width: 1600px;
+    height: 226px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32;
+    padding: 50px 160px 50px 160px;
+    align-self: stretch;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    width: 120.55px;
+    gap: 23px;
+    padding: 0px;
+
+}
+
+footer ul li {
+    display: inline-flex;
+    gap: 23px;
+    padding: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-line {
+    width: 1122px;
+    height: 0;
+    flex: none;
+    border: 1px solid rgba(14, 14, 14, 0.1);
+    gap: 32px;
+    margin: 32px 0px;
+}
+
+footer .title {
+    color: rgb(14, 14, 14);
+    font-family: Fira Sans;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0%;
+    text-align: left;
 }
